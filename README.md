@@ -1,2 +1,2 @@
 # FLOWER-SPECIES-IDENTIFICATION-WITH-DENSENET121-
-Built an image classification model with DenseNet121 and data augmentation for improved accuracy.
+This project developed an end-to-end image classification pipeline using DenseNet121 with data augmentation to enhance accuracy. The model was trained and evaluated on extracted image features to improve classification performance across key metrics.
