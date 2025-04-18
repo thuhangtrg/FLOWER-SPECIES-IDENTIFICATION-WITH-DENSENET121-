@@ -1,0 +1,179 @@
+/* Import font Poppins từ Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #4a8f4a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 5px 0 0;
+}
+
+/* Container chính */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Bố cục 2 cột */
+.layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Phần upload bên trái */
+.upload-section {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.upload-section:hover {
+    transform: translateY(-5px);
+}
+
+.upload-form {
+    margin: 0;
+}
+
+.file-input-wrapper {
+    margin-bottom: 20px;
+}
+
+.upload-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.upload-form input[type="file"]:hover {
+    border-color: #4a8f4a;
+}
+
+.upload-form small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.identify-btn {
+    background: linear-gradient(45deg, #4a8f4a, #6ab06a);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.identify-btn:hover {
+    background: linear-gradient(45deg, #3d763d, #589958);
+    transform: scale(1.05);
+}
+
+/* Thông báo lỗi */
+.flash-message {
+    background: #f44336;
+    color: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Phần kết quả bên phải */
+.result-section {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.result-section:hover {
+    transform: translateY(-5px);
+}
+
+.result-section h2 {
+    color: #4a8f4a;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.prediction-details {
+    background: #f0f8f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.flower-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #4a8f4a;
+    margin: 0 0 10px;
+}
+
+.confidence-score {
+    font-size: 1.2em;
+    color: #444;
+    margin: 0;
+}
+
+.image-preview h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #4a8f4a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-preview img:hover {
+    transform: scale(1.02);
+}

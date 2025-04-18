@@ -1,0 +1,8 @@
+numpy   
+flask
+pandas
+werkzeug
+openCV-python
+keras
+tensorflow
+matplotlib

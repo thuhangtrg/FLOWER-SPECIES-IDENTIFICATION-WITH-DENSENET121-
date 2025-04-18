@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Recognition System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>WEB NHẬN DIỆN HOA</h1>
+        <p>Nhóm trai tài gái sắc</p>
+    </header>
+    <div class="container">
+        <div class="layout">
+            <!-- Phần upload bên trái -->
+            <div class="upload-section">
+                <form method="POST" enctype="multipart/form-data" class="upload-form">
+                    <div class="file-input-wrapper">
+                        <input type="file" name="file" accept="image/*" required>
+                        <small>Upload hình ảnh với định dạng: JPG, PNG, JPEG</small>
+                    </div>
+                    <button type="submit" class="identify-btn">Nhận diện</button>
+                </form>
+                <!-- Thông báo lỗi -->
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="flash-message">
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            </div>
+
+            <!-- Phần kết quả bên phải -->
+            {% if prediction %}
+                <div class="result-section">
+                    <h2>Kết quả phân tích</h2>
+                    <div class="prediction-details">
+                        <p class="flower-name">Hoa: {{ prediction }}</p>
+                        <p class="confidence-score">Confidence: {{ confidence }}%</p>
+                    </div>
+                    <div class="image-preview">
+                        <h3>Hình ảnh đã tải lên:</h3>
+                        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Analyzed Flower">
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
